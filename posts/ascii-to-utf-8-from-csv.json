@@ -1,5 +1,5 @@
 {
-    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2009-06-23-ascii-to-utf-8-from-csv.md",
+    "filepath": "\/Users\/bothwell\/Dev\/websites\/hollsk-data\/raw\/2009-06-23-ascii-to-utf-8-from-csv.md",
     "filecreated": "2009-06-23",
     "metadata": {
         "title": "ASCII to UTF-8 from CSV",
@@ -16,6 +16,13 @@
     },
     "blog": {
         "recent": [
+            {
+                "title": "On being a deaf developer and deep accessibility",
+                "date": "2016-01-18 13:40",
+                "excerpt": "&ldquo;The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.&rdquo;  - Tim Berners-Lee, inventor of the World Wide Web",
+                "description": "Accessibility as a philosophy of problem-solving for everyone",
+                "slug": "being-a-deaf-developer"
+            },
             {
                 "title": "Setting up Vagrant boxes for web development",
                 "date": "2014-02-27 00:00",
@@ -50,13 +57,6 @@
                 "excerpt": null,
                 "description": "An unlikely situation",
                 "slug": "what-if-theres-no-json-support-on-your-server"
-            },
-            {
-                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
-                "date": "2011-11-11 13:52:54",
-                "excerpt": null,
-                "description": "Ruin your bike in 1 easy step",
-                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
             }
         ]
     }
