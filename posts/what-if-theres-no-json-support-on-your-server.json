@@ -1,0 +1,63 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2012-04-11-what-if-theres-no-json-support-on-your-server.md",
+    "filecreated": "2012-04-11",
+    "metadata": {
+        "title": "What if there's no JSON support on your server?",
+        "description": "An unlikely situation",
+        "date": "2012-04-11 09:52:39",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "17"
+    },
+    "slug": "what-if-theres-no-json-support-on-your-server",
+    "content": "<p>Everybody loves JSON. Every webservice and its dog uses JSON because it's awesome. It's easy to work with, it makes sense, and it's simple to check its validity and so on because there are so many SDKs and in-built libs that make wrangling a JSON response into objects or arrays a breeze.<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/4f858ca750eee.jpg\" alt=\"Holy shit\" title=\"\" class=\"align-right space-left standard-margin\" \/><\/p>\n\n<p>But what if, one day, you discover you're working on a server that doesn't support JSON?<\/p>\n\n<p>Yeah, I know, what is this, 1996? Unbelievably, this state of affairs does actually exist. If you can't make the webhost fix it (really dudes, just enable the module. Wtf?), then you've no choice but to resort to a library. There's a <a href=\"http:\/\/pecl.php.net\/package\/json\">PECL json package<\/a> that might do what you want, but that was a bust for me because if I couldn't persuade the webhost to switch on JSON I sure as hell wasn't going to be able to persuade them to install a PECL package.<\/p>\n\n<p>I googled about for a while and <a href=\"http:\/\/us2.php.net\/manual\/en\/function.json-decode.php#100740\">found some code on php.net<\/a> that claimed to do the job - that code is linked to in random places around the net by people who seem to think it's a great solution. The problem with this is twofold; firstly the code uses eval(), which will cause the gates of Hell to open the instant it runs and spew forth gibbering demons that will swallow your wretched, tainted little soul; and secondly it outputs what looks like an array construct but is actually a string. Which, given that PHP can't really cast the resulting string into a useful array, means it doesn't actually do anything helpful at all. Genius.<\/p>\n\n<p>Next!<\/p>\n\n<p>What eventually worked for me was a little <a href=\"http:\/\/pear.php.net\/pepr\/pepr-proposal-show.php?id=198\">PEAR library called services_json<\/a>. Include the JSON.phps file into your project, then do your decoding and encoding like so:<\/p>\n\n<pre><code>    include('JSON.phps');\n    $json = new Services_JSON();\n    $arrayOfDecodedJSON = $json-&gt;decode($JSONresponseFromSomewhere);\n<\/code><\/pre>\n\n<p>That's it. You can now encode and decode JSON as though your webhost isn't some kind of bizarre throwback from the 1800s.<\/p>\n",
+    "title": "What if there's no JSON support on your server? - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

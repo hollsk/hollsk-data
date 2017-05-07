@@ -1,0 +1,63 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2010-04-08-lotus-fucking-notes.md",
+    "filecreated": "2010-04-08",
+    "metadata": {
+        "title": "Lotus Fucking Notes",
+        "description": "Sent by Satan",
+        "date": "2010-04-08 11:18:01",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "10"
+    },
+    "slug": "lotus-fucking-notes",
+    "content": "<p>Lotus Notes is a tool sent by Satan himself to destroy the souls and the pleasure of all who are forced to use it. It is particularly distressing if you are a web developer creating HTML email campaigns for B2B customers. Here are some of the things I have learned about Shitty, Shitty Notes and how to 'fix' them.<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/4be466fb975fe.png\" alt=\"SAVE YOURSELVES\" title=\"\" class=\"align-right space-left standard-margin\" \/><\/p>\n\n<ul>\n<li><strong>No background images, ever<\/strong><br \/>\nNever, not ever. Also goes for Outlook 2007.<\/li>\n<li><strong>Use fallback font tags for Lotus Notes 5<\/strong><br \/>\n<em>Notes ignores my font style settings<\/em><br \/>\nNotes 5 chokes on inline font-face style declarations. The safest way to make sure it picks up the correct font is to use <code>&lt;font face=\"arial\"&gt;<\/code> tags instead of your fancy-pants modern CSS.<\/li>\n<li><strong>Don't bother centering tables<\/strong><br \/>\n<em>Notes won't center my layout<\/em><br \/>\nThere is no way to fix this. All versions of Notes will ignore <code>align=\"center\"<\/code> and display everything in the top left corner instead.<\/li>\n<li><strong>No CSS padding, margins, or width\/height attributes<\/strong><br \/>\n<em>Notes collapses my padding \/ height \/ width declarations, or ignores my margins<\/em><br \/>\nAll versions of Notes will strip these CSS declarations out of your code. Width and height attributes in native HTML generally aren't respected either, being collapsed to fit the wrapped content. You can, however, use HTML's native cellpadding and cellspacing attributes to get around this, and you can also use spacer images \/ shims. Both of these methods have their own unique pitfalls thanks to Notes' crappiness in other areas. It will collapse or expand table cells at will, depending on the phase of the moon and what colour pants you had on when you built the email. The most reliable way to fix table cell widths is to use transparent spacer images, but only if you don't mind them being at least 12px by 12px (see below).<\/li>\n<li><strong>No colspans or rowspans in tables<\/strong><br \/>\n<em>Notes has screwed up my complicated table!<\/em><br \/>\nNotes will generally collapse colspans and rowspans into some other configuration that you didn't expect. But if you think this means you can use additional empty <code>&lt;td&gt;<\/code> tags then you would be wrong;\n\n<ul>\n<li><strong>No empty table cells<\/strong><br \/>\nAll tables need to contain <em>something<\/em> otherwise Notes will sometimes decide not to bother displaying them. If you think this means you can get away with 1px square spacer.gif images, then you would be wrong;<\/li>\n<\/ul><\/li>\n<li><strong>No images with dimensions below 12px<\/strong><br \/>\n<em>Notes has stretched my images beyond recognition or they won't show up at all!<\/em><br \/>\nOlder versions of Notes will freak out if you give it any images that have dimensions smaller than 12px by 12px. It'll either resize your image up to 12px, or it'll just not display it at all.<\/li>\n<li><strong>Don't slice images up into sections<\/strong><br \/>\n<em>Notes is misaligning images in horizontal table rows<\/em><br \/>\nHorizontally-sliced images placed into neighbouring TDs will be aligned in a variety of interesting configurations in Notes 5, but seldom ones that you actually want. This includes it screwing up the positioning of images that are aligned in place using <code>valign=\"top\"<\/code> or <code>valign=\"bottom\"<\/code>. If you can possibly get away with using one big horizontal image then do it.<\/li>\n<li><strong>Don't expect any parent attribute to cascade into its child elements<\/strong><br \/>\nIf you set a table background colour then don't expect it to carry over into any table nested inside. Don't even expect it to cascade into the child <code>&lt;td&gt;<\/code>. Set all styles in the <code>&lt;td&gt;<\/code> itself for best support.<\/li>\n<li><strong>No CSS borders in Notes 5<\/strong><br \/>\nNotes 6 is fine with CSS borders, but Notes 5 won't display them. This effectively means 'no borders of any kind' in Notes 5 because of general flakiness. You can just about get away with using a background table with <code>cellspacing=\"1\"<\/code> around the nested content table but even that's a pain because Notes will sometimes cram the cell contents up against the left hand side and lose your faux border anyway.<\/li>\n<li><strong>No XHTML-style self-closing tags<\/strong><br \/>\nNotes 6 seems to be able to cope with XHTML-style self-closing tags ( <code>&lt;br\/&gt;<\/code> or <code>&lt;img \/&gt;<\/code> ). Notes 5 doesn't understand self-closing line breaks at all and will ignore them if it encounters them. It sort of understands self-closing image tags, at least well enough to display a broken image placeholder instead of the image itself. Stick to HTML style tags for images and line breaks instead: <code>&lt;img src=\"\"&gt;<\/code>, <code>&lt;br&gt;<\/code><\/li>\n<li><strong>Special characters are handled in special ways<\/strong><br \/>\nBy 'special' I mean, 'in some cases not at all'. There is no way to set the character encoding of a page in Notes emails so you are at the mercy of IBM and whoever is charge of the Domino server on this one. Some characters can be represented using their HTML entity (for example &raquo;). Some can be represented using their Unicode entity (for example &#27;). There don't appear to be any guides on the net regarding which ones Notes will and won't accept and I sure as shit don't have the inclination to make one, but as a general rule of thumb stick to the absolute basics and be prepared for Notes to mangle the input you give it.<\/li>\n<\/ul>\n\n<p>Finally, the good news: If an email works in Notes, then it's pretty much guaranteed to work in anything else you throw it at. Other rendering engines have other quirks and issues but none to the same murderous-rage level that Notes has.<\/p>\n",
+    "title": "Lotus Fucking Notes - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2016-01-18-being-a-deaf-developer.md",
+    "filecreated": "2016-01-18",
+    "metadata": {
+        "title": "On being a deaf developer and deep accessibility",
+        "description": "Accessibility as a philosophy of problem-solving for everyone",
+        "excerpt": "&ldquo;The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.&rdquo;  - Tim Berners-Lee, inventor of the World Wide Web",
+        "date": "2016-01-18 13:40",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "24"
+    },
+    "slug": "being-a-deaf-developer",
+    "content": "<div class=\"excerpt bs-callout bs-callout-info\"><p>\"The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.\"<\/p><p>- Tim Berners-Lee, inventor of the World Wide Web<\/p><\/div>\n\n<p>I've been deaf since infancy. It is not profound; my hearing loss is described as <em>moderate to severe<\/em> and is <a href=\"http:\/\/www.noisehelp.com\/high-frequency-hearing-loss.html\">mostly problematic at higher frequency ranges<\/a>, the range at which most human speech happens. I rely on lip-reading and identifying vowel patterns to understand spoken language. Particular struggles are:<\/p>\n\n<ul>\n<li>recognising consonants, especially <a href=\"https:\/\/en.wikipedia.org\/wiki\/Sibilant\">sibilants<\/a> and unvoiced consonants (all consonants are high frequency sounds, and the unvoiced and sibilant consonants <a href=\"http:\/\/www.elearnenglishlanguage.com\/blog\/learn-english\/pronunciation\/consonants-voiced-unvoiced\/\">don't activate the vocal chords<\/a>)<\/li>\n<li>the beginning of sentences<\/li>\n<li>the end of sentences<\/li>\n<\/ul>\n\n<p>Some deaf people <a href=\"https:\/\/www.reddit.com\/r\/programming\/comments\/az7tu\/do_you_think_a_deaf_programmer_can_still_be\/\">successfully become programmers<\/a>. It's mostly thought-based, often solitary work, where all your output is written down. Specifications and bugs come to you (in an ideal world, at least) on paper and in ticketing systems instead of through other people's noiseholes. Some areas aren't quite so fabulous (I'm looking at <em>you<\/em>, interminable conference call meetings involving 15 people sitting in a circle around a gigantic table), but adjustments are always possible.<\/p>\n\n<p>The stereotype of a programmer as a solitary eccentric who's allergic to human company is unfair <em>and<\/em> inaccurate. As a group, we're a very social bunch. We write blogs, we speak at conferences, we produce tutorials, we mentor. This isn't new, either - it's an atmosphere that dates from before the earliest days of the internet at Bell Labs, or MIT, and scores of other R&amp;D orgs. I love this social world of code, as being able to surround yourself with competent, enthusiastic individuals is a big part of becoming a better developer yourself. But one thing that I've always felt shut out of is pair programming.<\/p>\n\n<p>Pair programming, in principle, is great - it's like <a href=\"http:\/\/c2.com\/cgi\/wiki?RubberDucking\">Rubber Duck debugging<\/a> on steroids. You work together with another person who knows more than you and can guide you, or who perhaps knows less and will appreciate your guidance, or who perhaps knows precisely the same amount as you and can work with you to hash out a solution. Plus, y'know, it's fun. You get to know your colleagues. You get to remind yourself that <em>everyone<\/em> makes mistakes sometimes. You have somebody to catch you before you deploy that bit of code you are definitely not supposed to be deploying.<\/p>\n\n<p>But when you're deaf, that dynamic changes and the fun gets sucked out of it. For me, pairing sessions are worse than useless. As a driver, trying to think about the code, type, simultaneously look at the screen in front and lipread the pairing partner beside me, <em>and<\/em> understand their (often contextless), higher-frequency, spoken English and technical jargon with <a href=\"http:\/\/allthingslinguistic.com\/post\/108295580685\/but-you-can-lip-read-right\">~30% success rate<\/a> is a recipe for misery. Eventually I start staring glumly at an increasingly frustrated navigator before eventually relinquishing control and letting them drive instead, as it's the only way we'll be able to progress. Navigating is even worse - drivers look at their screen pretty much constantly because it's <em>hard<\/em> to think about how2code <em>and<\/em> your pairing partner's communication needs at the same time. I know! I <em>know<\/em>. So I become a passive navigator, and the driver does all the work, and it's just no good for anyone and eurgh. Eurgh!<\/p>\n\n<p>So it was great to get the opportunity to pair with <a href=\"http:\/\/rowanmanning.com\/\">Rowan Manning<\/a> on the <a href=\"https:\/\/github.com\/nature\/pa11y\">Pa11y<\/a> project, the automated accessibility testing tool built for <a href=\"http:\/\/www.nature.com\/\">Nature<\/a>. Using <a href=\"https:\/\/screenhero.com\/\">Screenhero<\/a> to set up a remote pairing session meant that we could both look at the screen and use text to communicate, losing no information and generating no confusion. This was the first time I've done a pairing session that worked as it should. It's difficult to express what a difference this makes as I think most hearing people find it hard to appreciate how much information loss occurs in general conversation with a deaf person. Imagine that in your city that all the books you've ever read have had ~60% of the words in them randomly blanked out with a Sharpie. Then imagine going on holiday to a neighbouring city where (mercifully) nobody does that and you can suddenly read an entire book without needing to guess at anything. It's a bit like that.<\/p>\n\n<p>There's a larger story here. At Nature, we have a set of developers who truly do care about accessibility. Providing equal access to Nature's 400-odd websites underpins everything that we do - when Tim Berners-Lee says that, \"The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect\", we agree. That grokking of accessibility runs deep, and at the time I've spent at Nature I've enjoyed unparalleled support from my colleagues in the form of notes, live-feeds of meetings, using <a href=\"http:\/\/www.theguardian.com\/careers\/careers-blog\/deaf-office-workers\">the ball method<\/a> to help me keep track of who's talking in group discussions, and pushing me to get support from <a href=\"https:\/\/www.gov.uk\/access-to-work\/overview\">Access to Work<\/a>. I've had more practical support for my disability in the 3 years I've been with Nature than in my 34 years of being alive!<\/p>\n\n<p>The opportunity to work alongside these accessibility grokkers at Nature has been great. They make no assumptions about ability and provide full access by default. So they get <a href=\"https:\/\/www.abilitynet.org.uk\">accessibility experts in<\/a> to look at our sites and make recommendations, they <a href=\"http:\/\/www.nature.com\/info\/accessibility_statement.html\">strongly apply WCAG standards<\/a> and <a href=\"http:\/\/pa11y.org\/\">build tools<\/a> to help meet those standards. When they're confronted with a real live disabled person on their honest-to-goodness actual team, they do everything that they can to help that person be a productive member of the group.<\/p>\n\n<p>Accessibility is considered a niche discipline. It shouldn't be. Disabled people are considered by developers to be a tiny minority. <a href=\"http:\/\/www.newstatesman.com\/media\/2014\/08\/bbc-s-plans-show-more-disabled-people-tv-are-good-they-should-be-better\">We aren't<\/a>. <a href=\"https:\/\/www.gov.uk\/rights-disabled-person\/the-equality-act-2010-and-un-convention\">Equal access is a right<\/a>.<\/p>\n\n<p>If you provide it, you make the web, and the world, better for everyone.<\/p>\n\n<p>This post was originally written for <a href=\"http:\/\/cruft.io\/posts\/deep-accessibility\/\">Cruft.io<\/a>, the Nature tech blog.<\/p>\n",
+    "title": "On being a deaf developer and deep accessibility - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

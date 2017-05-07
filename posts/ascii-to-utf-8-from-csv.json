@@ -1,0 +1,63 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2009-06-23-ascii-to-utf-8-from-csv.md",
+    "filecreated": "2009-06-23",
+    "metadata": {
+        "title": "ASCII to UTF-8 from CSV",
+        "description": "Sanitise that",
+        "date": "2009-06-23 10:11:30",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "7"
+    },
+    "slug": "ascii-to-utf-8-from-csv",
+    "content": "<p>Excel automatically exports CSV files as ASCII instead of UTF-8 which is intensely annoying if you need to put the data into a UTF-8 configured database. It's easy enough to just open the file in Notepad and resave it with the right character set, but that's no use if you're using files of unguaranteed origin.<\/p>\n\n<p>Force the data to use UTF-8 with PHP's <a href=\"http:\/\/www.php.net\/iconv\">iconv()<\/a> function.<\/p>\n\n<pre><code> $handle = fopen(\"..\/path\/to\/csv\/\", 'r');\n while ((($data = fgetcsv($handle, 0, \",\")) !== FALSE))\n {  \n    $data0 = mysql_real_escape_string(iconv('Windows-1252', 'UTF-8\/\/TRANSLIT',$data['0']));\n    $data1 = mysql_real_escape_string(iconv('Windows-1252', 'UTF-8\/\/TRANSLIT',$data['1']));\n\n    $q = \"INSERT INTO table (column1,column2) VALUES ('$data0','$data1') \";\n    mysql_query($q) or die(mysql_error());\n }\n<\/code><\/pre>\n\n<p>Et voila, ASCII to UTF-8&#46; I love PHP so much. :]<\/p>\n\n<p>PS: Always sanitise your data with <a href=\"http:\/\/www.php.net\/mysql_real_escape_string\">mysql_real_escape_string()<\/a> or similar. You wouldn't believe the amount of production applications that are vulnerable to SQL injection attacks. Whatever you choose to use will depend on your server setup but don't leave it out, you guys, or <a href=\"http:\/\/en.wikipedia.org\/wiki\/Bone_(comics)#Other_characters\">the Jekk<\/a> will come and drag you away by your tail!<\/p>\n",
+    "title": "ASCII to UTF-8 from CSV - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

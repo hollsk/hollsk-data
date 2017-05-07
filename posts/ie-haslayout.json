@@ -1,0 +1,62 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2010-05-07-ie-haslayout.md",
+    "filecreated": "2010-05-07",
+    "metadata": {
+        "title": "An odd IE6 layout bug",
+        "date": "2010-05-07 14:46:31",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "11"
+    },
+    "slug": "ie-haslayout",
+    "content": "<p>IE6 is not exactly short of haslayout bugs. Certain elements have or do not have layout by default. Applying certain CSS attributes to an element can lead it to gain or lose layout. This has been <a href=\"http:\/\/www.satzansatz.de\/cssd\/onhavinglayout.html\">covered<\/a> <a href=\"http:\/\/haslayout.net\/\">in-depth<\/a> <a href=\"http:\/\/css-class.com\/articles\/explorer\/guillotine\/\">elsewhere<\/a> so I won't go into it here.<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/4be460078e19a.jpg\" alt=\"fffffuuuuu\" title=\"\" class=\"align-right space-left standard-margin\" \/><\/p>\n\n<p>While working on the new blog for Royal Sun Alliance I encountered an awesome CSS tooltip bug whereby IE6 would apply a background colour to an absolutely-positioned element on hover, and then <em>not remove that background<\/em> on release. This is apparently due to to IE6 needing to redraw the element when it changes in order to affect the background colour change. Or something, I don't really know. It took quite a long time to identify this as a haslayout issue. Demonstration code lies below:<\/p>\n\n<pre><code>&lt;html&gt;\n&lt;head&gt;\n&lt;style type=\"text\/css\"&gt;\na.overlay:hover {\n    text-decoration:none;\n    background-color:transparent;\n}\na.overlay span { \n    position:absolute; \n    left:6px; \n    top:5px; \n    background:#000000; \n    color:#ffffff; \n    padding: 50px; \n    width: 423px; \n    height:176px; \n    display:none; \n}\na.overlay:hover span{\n    display:block;\n}\n&lt;\/style&gt;\n&lt;\/head&gt;\n\n&lt;body&gt;\n    &lt;div&gt;\n        &lt;a href=\"#\" class=\"overlay\"&gt;\n            &lt;img src=\"mypic.png\"\/&gt;\n            &lt;span&gt;teaser text goes here&lt;\/span&gt;\n        &lt;\/a&gt;\n    &lt;\/div&gt;\n&lt;\/body&gt;\n&lt;\/html&gt;\n<\/code><\/pre>\n\n<p>And <a href=\"http:\/\/www.hollsk.co.uk\/files\/haslayoutbug.html\">here is the bug in action<\/a>. IE7 upwards all seem fine, it's only IE6 that has the problem.<\/p>\n\n<p>In order to stop IE6 from getting stuck retaining the background after you've moused off you've got two options, viz: either use javascript (which is what I was expressly trying to avoid), or remove the attribute that is giving the .overlay span the haslayout property. In this case, it's the position:absolute that is the culprit. You can't get away with using any of the other position attributes except from position:static, which is the default. For the purposes of this issue, I went with position:static plus some negative margins to secure the overlay element in place.<\/p>\n",
+    "title": "An odd IE6 layout bug - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+---
+title: Setting up Vagrant boxes for web development
+date: 2014-02-27 00:00
+lastmod: 2016-08-12 00:00
+disqus_identifier: 22
+---
+
+Vagrant is amazing. If you're not using it yet, then you should be. It's strength is that you have a portable server that doesn't need set up on every machine you own that you can just go off and use without messing about. If something goes wrong with it, just destroy the virtual machine and reload it.
+
+So as a PHP developer you've learned that [Vagrant](http://www.vagrantup.com/) is the business and you've decided to use it. The first thing you do is go to the website, download Vagrant, and then download VirtualBox. Now you're ready to download your first base box and use it. This is where things will start to suck and you will waste lots of time.
+
+![](http://hollsk.co.uk/hollsk/images/uploads/vagrant_chilling.png){.align-right .space-left .standard-margin} Generally-speaking, when you look for your first base box, you'll probably go to the recommended [http://www.vagrantbox.es/](http://www.vagrantbox.es/) and look for an initial setup there. Unless you're very, very lucky, you'll probably regret this. I've tried many of these base boxes and they've all been exclusively horrible, filled with problems, lots of really basic things not installed, with weird deficiencies in setup that are difficult to correct. I have wasted _days_ trying to get these things to work the way I want them to and thus haven't saved any more time than I would have done just installing MAMP or something as a one-shot server solution on my local machine. So what good is it recommending that everybody stop doing boring old MAMP / WAMP development and move onto Vagrant instead if they're only going to waste time trying to configure broken base boxes?
+
+![](http://hollsk.co.uk/hollsk/images/uploads/puphet.png){.align-left .space-right .standard-margin} The key is to get a decent base box in the first place. There's no way to tell from vagrantbox.es whether a given box is any good or not until you've actually downloaded, imported, and started trying to use it, and ain't nobody got time for that. Enter [PuPHPet](https://puphpet.com/). It's aimed squarely at people like you, people like me. People who are tired of downloading terrible, terrible base boxes from vagrantbox.es and realising after too much time struggling that there are issues with misconfigured or missing software that mean you need to throw out everything and start again. The author of PuPHPet, like us, is tired of all that, and so he has written something that will ease your pain and allow you to love your Vagrant environment in the way it is supposed to be loved. Use this tool. I promise it will make you happy.

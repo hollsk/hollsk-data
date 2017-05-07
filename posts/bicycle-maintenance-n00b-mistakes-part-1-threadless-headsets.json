@@ -1,0 +1,63 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2011-11-11-bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets.md",
+    "filecreated": "2011-11-11",
+    "metadata": {
+        "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+        "description": "Ruin your bike in 1 easy step",
+        "date": "2011-11-11 13:52:54",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "15"
+    },
+    "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets",
+    "content": "<p>A rattling noise emanating from your handlebars usually means a loose headset. To adjust your threadless headset, you undo the top cap bolt followed by the two stem bolts, and then replace the top cap bolt and tighten it. Once there is no more 'play' in the headset (as determined by holding the brakes and rocking the front of the bike backwards and forwards feeling for a graunchy\/clicking sensation), tighten your two stem bolts and then ride away.<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/4ebd7d16cc008.jpg\" alt=\"Headset anatomy\" title=\"\" class=\"align-right space-left standard-margin\" \/><\/p>\n\n<p>SOUNDS SIMPLE! As it turns out, there are ways to fuck this up. One way, I have learned to my personal cost, is to over-tighten the top bolt through being unsure of how tight it actually needs to be. The answer is that it doesn't actually need to be tight at all - only tighten it until the play disappears. The top cap bolt is not for stabilising or securing anything, it's only for pulling your forks into position so that they can be bound into place with the two stem bolts. The stem bolts, on the other hand, should be tightened \"to the correct torque\" because they are for stability. (NB don't tighten them so much that you can't loosen them again. I don't have a torque measuring thing so I do them up to what I believe to be subjectively tight, and I have not yet died.)<\/p>\n\n<p>If you tighten your top cap bolt too much, this happens:<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/star-fangled-nut.jpg\" alt=\"mangled star-fangled nut\" \/> <img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/star-fangled-nut2.jpg\" alt=\"mangled star-fangled nut\" \/><\/p>\n\n<p>This is the remains of a star-fangled nut. The rest of the star-fangled nut is stuck in my steerer tube. I have smashed that down with a mallet since I couldn't get it out. The star-fangled nut is designed to resist the top cap bolt's upwards pull and draw the front forks up towards the stem. If you over-tighten the top cap bolt, you'll end up popping your star-fangled nut like this. So yeah, don't do that.<\/p>\n\n<p>The good news is that this technique can be used to purposefully remove a star-fangled nut if you need to, but I didn't think of this at the time hence the mallet action.<\/p>\n\n<p><strong>Bonus n00b tip<\/strong>: you don't actually have to replace a star-fangled nut with another star-fangled nut. Hope do a contraption called a <a href=\"http:\/\/www.hopetech.com\/page.aspx?itemID=SPG115\">Hed Doctor<\/a> that uses an expanding bung instead of a poppable nut, and it's pretty much idiot-proof.<\/p>\n\n<p><strong>Bonus n00b tip #2<\/strong>: a rattling sound emanating from your handlebars isn't always the headset! There's a chance it could be related to the horrible job you did of taping your bars where you fit the bar ends on afterwards but didn't quite secure them properly.<\/p>\n\n<p><small>The image of the threadless headset above was stolen, shamelessly, from <a href=\"http:\/\/www.sheldonbrown.com\/headsets.html\">Sheldon Brown's excellent website<\/a><\/small><\/p>\n",
+    "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

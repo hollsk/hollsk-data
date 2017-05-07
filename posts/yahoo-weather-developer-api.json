@@ -1,0 +1,63 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2009-03-25-yahoo-weather-developer-api.md",
+    "filecreated": "2009-03-25",
+    "metadata": {
+        "title": "Yahoo! Weather Developer API",
+        "description": "Weather 100% guaranteed",
+        "date": "2009-03-25 08:45:13",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "4"
+    },
+    "slug": "yahoo-weather-developer-api",
+    "content": "<p>So I've been playing with the Yahoo! Weather API, which is quite fun. By using cURL, we can grab and then scrape the contents of Yahoo!'s weather RSS feed to find out what the current atmospheric conditions are in any given location, then use that data for your own devious ends.<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/bbc_rain.gif\" alt=\"Michael Fish! Yeah!\" title=\"\" class=\"align-right\" \/> Being typically London-centric, I am only interested in the weather in London, which I am sure is absolutely <em>fascinating<\/em> for those of you in other parts of the UK or indeed the world (big shout out to my visitors from <a href=\"http:\/\/volunteer.grassroots.org\/\">Grassroots.org<\/a>, keep fighting the good fight, you guys!)<\/p>\n\n<p>This idea was originally stolen outright from <a href=\"http:\/\/css-tricks.com\/using-weather-data-to-change-your-websites-apperance-through-php-and-css\/\">CSS Tricks<\/a>, who posted it a year ago but I couldn't really think of a use for it. I'd already been changing this site's entire style (and haiku) depending on the current season, so it was a natural progression to do something with the weather, too. To that end, I've added a little Flash animation up the top there that changes with the weather. Usually. Sort of. In a manner of speaking. I haven't quite got round to doing a rain\/snow version yet because it hardly ever rains in London, right? Riiiiiight.<\/p>\n\n<p>Anyway, check out the tutorial on CSS Tricks and the Yahoo! Developer API for more information. It's not necessarily <em>useful<\/em>, but it does make otherwise static pages a bit more interesting.<\/p>\n\n<p><em>Edit: 18\/04\/2009<\/em><br \/>\nAs an aside, I added a little bit of code to CSS Tricks' stuff for extra customisation. Those guys did it by naming a style sheet after a particular weather condition and switching to it depending on the name. If no stylesheet existed, it would default to sunny. I wanted more control, so I used a hashmap to decide on an output depending on what was pulled in. PHP is good because any array can be used as a hashmap, so making these sort of associations is super-easy, like so:<\/p>\n\n<pre><code>\/\/ this is the hashmap - the fact that practically everything is \"cloudy\" is a testament to my excellent generalisation skills \n\/\/ it in no way suggests that I was too lazy to replicate the full spectrum of weather possibilities\n$hashmap = array(\n    'cloudy' =&gt; 'cloudy',\n    'partly-cloudy' =&gt; 'partly-cloudy',\n    'mostly-cloudy' =&gt; 'cloudy',\n    'scattered-thunderstorms' =&gt; 'thunder',\n    'isolated-thundershowers' =&gt; 'thunder',\n    'isolated-thunderstorms' =&gt; 'thunder',    \n    'severe-thunderstorms' =&gt; 'thunder',   \n    'thundershowers' =&gt; 'thunder',    \n    'thunderstorms' =&gt; 'thunder',\n    'hail' =&gt; 'thunder',    \n    'scattered-snow-showers' =&gt; 'snow',    \n    'mixed-rain-and-sleet' =&gt; 'snow',\n    'mixed-snow-and-sleet' =&gt; 'snow',\n    'mixed-rain-and-snow' =&gt; 'snow',    \n    'light-snow-showers' =&gt; 'snow',\n    'snow-flurries' =&gt; 'snow', \n    'blowing-snow' =&gt; 'snow',\n    'snow-showers' =&gt; 'snow',  \n    'heavy-snow' =&gt; 'snow',    \n    'sleet' =&gt; 'snow',\n    'snow' =&gt; 'snow',    \n    'mixed-rain-and-hail' =&gt; 'cloudy',  \n    'scattered-showers' =&gt; 'cloudy',    \n    'freezing-drizzle' =&gt; 'cloudy',\n    'freezing-rain' =&gt; 'cloudy',\n    'light-rain' =&gt; 'cloudy',    \n    'drizzle' =&gt; 'cloudy',\n    'showers' =&gt; 'cloudy',\n    'fog' =&gt; 'cloudy',\n    'haze' =&gt; 'fair',\n    'blustery' =&gt; 'fair',\n    'windy' =&gt; 'fair',\n    'clear' =&gt; 'fair',\n    'fair' =&gt; 'fair'\n); \n\n$weather = $hashmap[$condition]; \/\/ $weather_class comes from the CSS Tricks code, it's pulled with cURL\n\n$weather_class = str_replace('-', ' ',$weather_class); \n\/\/ the RSS url we are working with may contain hyphens, so we change them to spaces instead\n\nif (date('G') == '0') { $time = 'night'; } \/\/ check the time (24 hour time) - if it's midnight, then it's night\nelse if ((date('G') &lt;= '18') &amp;&amp; (date('G') &gt;= '5')) { $time = \"day\"; } \/\/ if it's between 6pm and 5am then it's day\nelse { $time = 'night'; } \/\/ otherwise it's night\n\nprint \"Weather in London: \".$weather_class.\" \";\n<\/code><\/pre>\n\n<p>From there you can use your <code>$time<\/code> and <code>$weather<\/code> variables to determine which style sheet\/image\/whatever you want to display.<\/p>\n",
+    "title": "Yahoo! Weather Developer API - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}

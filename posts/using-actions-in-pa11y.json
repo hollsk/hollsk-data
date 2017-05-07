@@ -1,0 +1,62 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2017-03-13-using-actions-in-pa11y.md",
+    "filecreated": "2017-03-13",
+    "metadata": {
+        "title": "Using actions in Pa11y",
+        "description": "We recently released Actions for Pa11y and Pa11y Dashboard. This post explores the reasons behind the change, and how to put it to use in your projects right now. ",
+        "date": "2017-03-12 14:20:00",
+        "lastmod": "2017-03-12 14:20:00"
+    },
+    "slug": "using-actions-in-pa11y",
+    "content": "<p>One of the most common questions users have when they start using <a href=\"http:\/\/pa11y.org\/\">Pa11y<\/a> is how to perform tasks on a page before they run the tests. Most often that takes the form of logging into an account page and going through a redirect, but it could also mean things like switching to a particular tab, or waiting for something to become visible.<\/p>\n\n<p>We <a href=\"https:\/\/github.com\/pa11y\/pa11y\/issues\/98\">solved this problem<\/a> by adding a <code>beforeScript()<\/code> hook to allow uses to run arbitrary code before handing off the results of their actions to Pa11y for testing. It worked great! The only problem was its own success - over time people began to do more and more things with it, and some of the use cases were generating very complex code that wasn't always easy to understand. To make the best use of <code>beforeScript()<\/code> in a complex series of actions, you really needed to have a good model in your head for how Pa11y interacts with PhantomJS, and where your own code fits into that picture. That's fine if you're already familiar with PhantomJS scripting, but if Pa11y is your introduction to Phantom (or even to Node.js itself), figuring out what's going on can be hard.<\/p>\n\n<p>We <a href=\"https:\/\/github.com\/pa11y\/pa11y#actions\">solved this new problem<\/a> by adding Actions! We took inspiration from automation libraries like <a href=\"http:\/\/nightwatchjs.org\/\">Nightwatch<\/a>, as we really liked the simplicity of being able to use clean syntax to create a list of commands that could be executed in series. Although our users want to do all kinds of interesting and unique things on their pages before running tests, the actions that they take are pretty easy to condense into discrete commands - click this, wait for that, fill those fields with data.<\/p>\n\n<p>Let's build an example. Imagine we have an online pie shop. We want users to press a button to obtain a delicious pie, be redirected to a login page to input their account details, and then redirect them again to the delivery confirmation page (if only all pie acquisition were so easy). We're interested in the accessibility of the delivery confirmation page only, since we're able to easily test the other two pages directly.<\/p>\n\n<p>With <code>beforeScript()<\/code>, things can get kind of ugly:<\/p>\n\n<pre><code>var test = pa11y({\n    beforeScript: function(page, options, next) {\n\n        \/\/ create a function that will poll Phantom for changes to the current page...\n        var waitUntil = function(condition, retries, waitOver) {\n            page.evaluate(condition, function(error, result) {\n                if (result || retries &lt; 1) {\n                    \/\/ Once the changes have taken place continue with Pa11y testing\n                    waitOver();\n                } else {\n                    retries -= 1;\n                    setTimeout(function() {\n                        waitUntil(condition, retries, waitOver);\n                    }, 200);\n                }\n            });\n        };\n\n        \/\/ start working through the flow of pages...\n        page.evaluate(function() {\n\n            \/\/ order a pie\n            var addToCartButton = document.getElementById('addToCartButton');\n            addToCartButton.click();\n\n        }, waitUntil(function() {\n\n              \/\/ wait until we're redirected to the login page\n              return window.location.href === 'http:\/\/the-pa11y-pie-shop\/login';\n\n            }, 20, function() {\n                page.evaluate(function() {\n\n                    \/\/ add data to the login fields and submit\n                    var user = document.querySelector('#username');\n                    var password = document.querySelector('#password');\n                    var submit = document.querySelector('#submit');\n\n                    user.value = 'exampleUser';\n                    password.value = 'password1234';\n                    submit.click();\n\n                }, waitUntil(function() {\n\n                        \/\/ wait until we're redirected to the delivery page, then pass the next callback to test!\n                        return window.location.href === 'http:\/\/the-pa11y-pie-shop\/delivery-confirmation\/5px372aa8j';\n\n                    }, 20, next)\n                )\n            })\n        );\n\n    }\n});\n<\/code><\/pre>\n\n<p>You can see from here that there are two main problems - context switching and callback hell. <code>page.evaluate()<\/code> is a Phantom method. It tells the headless browser to begin evaluating the page you've passed to it, and returns a callback. We use <code>waitUntil()<\/code> as that callback, plugging our own function into the <code>beforeScript()<\/code> context, that passes off to another Phantom context, and so on. Switch in, switch out, switch in, switch out. If you're not familiar with Phantom, or with JavaScript context, this can be super confusing.<\/p>\n\n<p>The rat's nest of callback hell could be fixed using Promises, but that takes us into the realm of teaching JavaScript best practice. We're a tiny team of maintainers at Pa11y, and we don't really have that kind of time. And we'd still have the context switching problem.<\/p>\n\n<p>Let's try the same thing with Actions instead:<\/p>\n\n<pre><code>var test = pa11y({\n  actions: [\n    'click element #addToCartButton',\n    'wait for url to be http:\/\/the-pa11y-pie-shop\/login',\n    'set field #username to exampleUser',\n    'set field #password to password1234',\n    'click element #submit',\n    'wait for url to be http:\/\/the-pa11y-pie-shop\/delivery-confirmation\/5px372aa8j'\n  ]\n});\n<\/code><\/pre>\n\n<p>Easier, isn't it?<\/p>\n\n<p>We haven't removed <code>beforeScript()<\/code> as it's still really useful, but it helps if you look at using <code>beforeScript()<\/code> as playing in Hard Mode. When you run your tests, you can choose to use either <code>beforeScript()<\/code> <em>or<\/em> Actions, not both. We strongly recommend using Actions if you want to take some specific, simple steps before you test a page. If the Actions we've provided are missing something that you need, please <a href=\"https:\/\/github.com\/pa11y\/pa11y\/issues\">create an issue<\/a> to tell us about it! We're really pleased with this feature, and we want to make it even better.<\/p>\n\n<p>Actions are available in <a href=\"https:\/\/github.com\/pa11y\/pa11y\/\">Pa11y CLI<\/a>, <a href=\"https:\/\/github.com\/pa11y\/webservice\/\">Pa11y Webservice<\/a>, <a href=\"https:\/\/github.com\/pa11y\/dashboard\/\">Pa11y Dashboard<\/a>, and in our work-in-progress replacement for Dashboard, codenamed <a href=\"https:\/\/github.com\/pa11y\/sidekick\/\">Sidekick<\/a>.<\/p>\n\n<p>We hope you enjoy working with them!<\/p>\n",
+    "title": "Using actions in Pa11y - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "On being a deaf developer and deep accessibility",
+                "date": "2016-01-18 13:40",
+                "excerpt": "&ldquo;The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.&rdquo;  - Tim Berners-Lee, inventor of the World Wide Web",
+                "description": "Accessibility as a philosophy of problem-solving for everyone",
+                "slug": "being-a-deaf-developer"
+            },
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            }
+        ]
+    }
+}

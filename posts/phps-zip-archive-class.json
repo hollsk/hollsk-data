@@ -1,0 +1,63 @@
+{
+    "filepath": "\/var\/www\/hollsk-webservice\/web\/data\/raw\/2010-11-12-phps-zip-archive-class.md",
+    "filecreated": "2010-11-12",
+    "metadata": {
+        "title": "PHP's ZipArchive class",
+        "description": "Tl;dr: your path is probably wrong.",
+        "date": "2010-11-12 07:17:39",
+        "lastmod": "2016-08-12 00:00",
+        "disqus_identifier": "13"
+    },
+    "slug": "phps-zip-archive-class",
+    "content": "<p>I spent a few days last week trying to get <a href=\"http:\/\/us3.php.net\/manual\/en\/class.ziparchive.php\">ZipArchive<\/a> working to produce on-the-fly archives for a Wordpress blog I was working on.<\/p>\n\n<p><img src=\"http:\/\/hollsk.co.uk\/hollsk\/images\/uploads\/4cdd4e8ded30f.jpg\" alt=\"Philosoraptor considers the way of the JSON\" title=\"\" class=\"align-right space-left standard-margin\" \/><\/p>\n\n<p>This led me down a few dead-ends including \"<a href=\"http:\/\/www.fileslinger.com\/2010\/03\/backupbuddy-the-holy-grail-of-wordpress-backups-is-almost-within-reach\/\">Rackspace Cloud has issues with ZipArchive<\/a>\". Luckily this last explanation regarding Rackspace Cloud (and most likely the others too) isn't actually true and is due to a simple but easily-made misunderstanding of how ZipArchive works.<\/p>\n\n<p>ZipArchive is, to be honest, a <a href=\"http:\/\/codingrecipes.com\/the-annoying-php-ziparchive-class\">bit of a pain in the arse<\/a>. After you've added your files using addFile() you can grab a status code from the method to indicate whether your attempt was successful - if everything's ok you'll get status 0 returned for no error.<\/p>\n\n<p>The problem is that this check only cares about whether the method was able to actually add files to the new zip object - the file itself doesn't get written until you call zip->close(). If zip->close() fails then lolz@you because you won't be getting any notification from zipArchive itself. ZipArchive only returns true or false, thus leaving you with a silent failure.<\/p>\n\n<p>The key is, predictably, to make sure your filepath is valid.<\/p>\n\n<p><code>$filename = \"..\/wp-content\/uploads\/check-out-my-download.zip\";<\/code><\/p>\n\n<p>is fine, but<\/p>\n\n<p><code>$filename = \"\/wp-content\/uploads\/check-out-my-download.zip\";<\/code><\/p>\n\n<p>in some cases is not. ZipArchive may interpret the leading slash as you intending to go all the way back up to the <em>actual<\/em> root directory of the document on the machine it sits on, so something like \/mnt\/usr\/htdocs\/webroot\/content\/wp-content\/uploads\/check-out-my-download.zip is what is actually produced. This is unlikely to be accessible from your application, hence the path not being located. This behaviour is bound to the way the server itself is set up, which is why some people have this problem when others don't.<\/p>\n\n<p>If you're having difficulty getting ZipArchive to make archives but not getting any actual errors, then the above is almost certainly the problem. Be extra-careful with your filepaths.<\/p>\n",
+    "title": "PHP's ZipArchive class - hollsk.co.uk",
+    "layout": {
+        "template": "post"
+    },
+    "blog": {
+        "recent": [
+            {
+                "title": "Setting up Vagrant boxes for web development",
+                "date": "2014-02-27 00:00",
+                "excerpt": null,
+                "description": null,
+                "slug": "setting-up-vagrant-boxes-for-web-development"
+            },
+            {
+                "title": "Why I switched to Susy",
+                "date": "2013-04-13 15:57:41",
+                "excerpt": null,
+                "description": "Tl;dr: because everything else pretty much sucks",
+                "slug": "why-i-switched-to-susy"
+            },
+            {
+                "title": "The London Classic 2013",
+                "date": "2013-04-08 15:40:21",
+                "excerpt": null,
+                "description": "The Heaven of the South",
+                "slug": "the-london-classic-2013"
+            },
+            {
+                "title": "London - Bletchley 23\/06\/2012",
+                "date": "2012-06-28 02:35:30",
+                "excerpt": null,
+                "description": null,
+                "slug": "london-bletchley-23-06-2012"
+            },
+            {
+                "title": "What if there's no JSON support on your server?",
+                "date": "2012-04-11 09:52:39",
+                "excerpt": null,
+                "description": "An unlikely situation",
+                "slug": "what-if-theres-no-json-support-on-your-server"
+            },
+            {
+                "title": "Bicycle maintenance: n00b mistakes part 1 - threadless headsets",
+                "date": "2011-11-11 13:52:54",
+                "excerpt": null,
+                "description": "Ruin your bike in 1 easy step",
+                "slug": "bicycle-maintenance-n00b-mistakes-part-1-threadless-headsets"
+            }
+        ]
+    }
+}
