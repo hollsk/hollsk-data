@@ -6,6 +6,13 @@
     "blog": {
         "recent": [
             {
+                "title": "Let's Watch: White Zombie",
+                "date": "2017-05-07 14:20:00",
+                "excerpt": null,
+                "description": "Two things I enjoy are folklore and zombies. Oddly in spite of the latter I've never been much of a movie fan; being deaf means I'm obliged to use subtitles and since I'm reading anyway, why not just read a book? But I am interested in the origins of the zombies we know and love today, so since it's Zombie Awareness Month, I've decided to embark on a journey of cinematic discovery, if you will, a zomboddysey, of the zombie canon in cinematic history. So let's watch White Zombie!",
+                "slug": "lets-watch-white-zombie"
+            },
+            {
                 "title": "Using actions in Pa11y",
                 "date": "2017-03-12 14:20:00",
                 "excerpt": null,

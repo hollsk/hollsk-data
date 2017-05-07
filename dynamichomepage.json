@@ -79,6 +79,13 @@
     "blog": {
         "recent": [
             {
+                "title": "Using actions in Pa11y",
+                "date": "2017-03-12 14:20:00",
+                "excerpt": null,
+                "description": "We recently released Actions for Pa11y and Pa11y Dashboard. This post explores the reasons behind the change, and how to put it to use in your projects right now. ",
+                "slug": "using-actions-in-pa11y"
+            },
+            {
                 "title": "On being a deaf developer and deep accessibility",
                 "date": "2016-01-18 13:40",
                 "excerpt": "&ldquo;The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.&rdquo;  - Tim Berners-Lee, inventor of the World Wide Web",
@@ -112,21 +119,14 @@
                 "excerpt": null,
                 "description": null,
                 "slug": "london-bletchley-23-06-2012"
-            },
-            {
-                "title": "What if there's no JSON support on your server?",
-                "date": "2012-04-11 09:52:39",
-                "excerpt": null,
-                "description": "An unlikely situation",
-                "slug": "what-if-theres-no-json-support-on-your-server"
             }
         ],
         "feature": {
-            "title": "Using actions in Pa11y",
-            "date": "2017-03-12 14:20:00",
+            "title": "Let's Watch: White Zombie",
+            "date": "2017-05-07 14:20:00",
             "excerpt": null,
-            "description": "We recently released Actions for Pa11y and Pa11y Dashboard. This post explores the reasons behind the change, and how to put it to use in your projects right now. ",
-            "slug": "using-actions-in-pa11y"
+            "description": "Two things I enjoy are folklore and zombies. Oddly in spite of the latter I've never been much of a movie fan; being deaf means I'm obliged to use subtitles and since I'm reading anyway, why not just read a book? But I am interested in the origins of the zombies we know and love today, so since it's Zombie Awareness Month, I've decided to embark on a journey of cinematic discovery, if you will, a zomboddysey, of the zombie canon in cinematic history. So let's watch White Zombie!",
+            "slug": "lets-watch-white-zombie"
         }
     }
 }
