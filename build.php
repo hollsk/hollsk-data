@@ -57,7 +57,6 @@
             if($pathbits['extension'] == "md") {
                 $postContent = extractSetup($filepath);
                 array_push($allItems, array(
-                    "filepath"=>$filepath,
                     "filecreated"=>substr($entry, 0, 10),
                     "metadata"=> $postContent["metadata"],
                     "slug"=>substr($entry, 11, -3),
