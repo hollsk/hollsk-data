@@ -79,6 +79,13 @@
     "blog": {
         "recent": [
             {
+                "title": "Let's Watch: Revolt of the Zombies",
+                "date": "2017-05-08 21:44:00",
+                "excerpt": null,
+                "description": "Two things I enjoy are folklore and zombies. Oddly in spite of the latter I've never been much of a movie fan; being deaf means I'm obliged to use subtitles and since I'm reading anyway, why not just read a book? But I am interested in the origins of the zombies we know and love today, so since it's Zombie Awareness Month, I've decided to embark on a journey of cinematic discovery, if you will, a zomboddysey, of the zombie canon in cinematic history. So let's watch Revolt of the Zombies!",
+                "slug": "lets-watch-revolt-of-the-zombies"
+            },
+            {
                 "title": "Let's Watch: White Zombie",
                 "date": "2017-05-07 14:20:00",
                 "excerpt": null,
@@ -112,21 +119,14 @@
                 "excerpt": null,
                 "description": "Tl;dr: because everything else pretty much sucks",
                 "slug": "why-i-switched-to-susy"
-            },
-            {
-                "title": "The London Classic 2013",
-                "date": "2013-04-08 15:40:21",
-                "excerpt": null,
-                "description": "The Heaven of the South",
-                "slug": "the-london-classic-2013"
             }
         ],
         "feature": {
-            "title": "Let's Watch: Revolt of the Zombies",
+            "title": "Let's Watch: Ouanga and The Devil's Daughter",
             "date": "2017-05-08 21:44:00",
             "excerpt": null,
-            "description": "Two things I enjoy are folklore and zombies. Oddly in spite of the latter I've never been much of a movie fan; being deaf means I'm obliged to use subtitles and since I'm reading anyway, why not just read a book? But I am interested in the origins of the zombies we know and love today, so since it's Zombie Awareness Month, I've decided to embark on a journey of cinematic discovery, if you will, a zomboddysey, of the zombie canon in cinematic history. So let's watch Revolt of the Zombies!",
-            "slug": "lets-watch-revolt-of-the-zombies"
+            "description": "Two things I enjoy are folklore and zombies. Oddly in spite of the latter I've never been much of a movie fan; being deaf means I'm obliged to use subtitles and since I'm reading anyway, why not just read a book? But I am interested in the origins of the zombies we know and love today, so since it's Zombie Awareness Month, I've decided to embark on a journey of cinematic discovery, if you will, a zomboddysey, of the zombie canon in cinematic history. So let's watch Ouanga and The Devil's Daughter!",
+            "slug": "lets-watch-ouanga-and-devils-daughter"
         }
     }
 }
