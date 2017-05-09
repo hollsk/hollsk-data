@@ -5,7 +5,8 @@ date: 2017-05-08 21:44:00
 lastmod: 2017-05-08 21:44:00
 ---
 
->Who the gods destroy, they first make mad. 
+>Who the gods destroy, they first make mad.  
+>_Some guy_, Revolt of the Zombies 
 
 Dear lord, where even to begin with this. A sequel of sorts to [_White Zombie_](/posts/lets-watch-white-zombie) (thematically, if not in terms of plot), after making this movie, Victor Halperin gave up horror for good - "I don't believe in fear, violence, and horror, so why traffic in them?". 
 
@@ -19,7 +20,7 @@ Expressing surprise and regret at how the prisoner could possibly have died unde
 
 Cliff and Armand are both in love with Claire, and Claire agrees to marry both of them (on separate occasions, not simultaneously), to make one jealous and... oh, I don't know. It's the worst kind of contrived romance caper. Despite this passionate love triangle, there's as much visible chemistry between any of the three as there is between the contents of a bag of room-temperature chicken giblets. Just like with _White Zombie_ I struggled to keep track of which of the men was supposed to be the groom. Whatever. 
 
-Anyway, they get to the backdropped lands of Angkor Wat, and Armand has a meltdown because dreadful Claire has dropped him for irritating Cliff. In a rage, he figures out where the zombie secret is hidden, heads to its hiding place and steals it, and then zombifies everyone in the expedition to persuade Claire to love him(?). Predictably, it doesn't work. To prove his love(?) he then releases all his erstwhile zombified charges. They storm the building at Sunday stroll pace and shoot him once, right in the guts, finishing this awful ordeal for us all. 
+Anyway, they get to the backdropped lands of Angkor Wat, and Armand has a meltdown because dreadful Claire has dropped him for irritating Cliff. In a rage, he figures out where the zombie secret is hidden, heads to its hiding place and steals it, and then zombifies everyone in the expedition in order to persuade Claire to love him(?). This doesn't work. To prove his love(?) he decides to release all his zombies. They storm the building at Sunday stroll pace and shoot him once, right in the guts, finishing this awful ordeal for us all. 
 
 Structurally, this is a very strange film that doesn't really seem to know what it wants to be. It's a romantic melodrama, yes, but it's also got robot war zombies in. It wants to tell a moral story about how you shouldn't let your ambitions consume you, but it also wants to transpose Haitian bokor magic into WW1 Cambodia(?)
 

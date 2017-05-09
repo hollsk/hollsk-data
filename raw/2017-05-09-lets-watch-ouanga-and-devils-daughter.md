@@ -5,7 +5,7 @@ date: 2017-05-08 21:44:00
 lastmod: 2017-05-08 21:44:00
 ---
 
-A zombie fiction double feature today! _Ouanga_ (1936) and _The Devil's Daughter_ (1939) are our first villainous leading ladies. Fredi Washington's Clelie turns to bokor to get back at a man, and Nina Mae McKinney's Isabella turns to bokor to get back at her sister. 
+A zombie fiction double feature today! _Ouanga_ (1936) and _The Devil's Daughter_ (1939) feature our first villainous leading ladies. Fredi Washington's Clelie turns to dark magic to get back at a man, and Nina Mae McKinney's Isabella turns to dark magic to get back at her sister. 
 
 First, Ouanga. Quite an obscure one, (Something Weird Videos is the only reliable stockist online I've found), it has the unenviable prestige of being poorly-recieved in 1936 _and_ poorly recieved today, culminating in being almost forgotten by history. Production quality-wise it's actually ok, and the acting is a significant step up from the lamentable turns we've seen so far in White Zombie and Revolt of the Zombies. Fredi Washington in particular does a great line in shade-throwing, side-eye, and outright sneering menace. Cinematically it's quite switched on, and it's reasonably well choreographed. 
 
