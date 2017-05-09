@@ -1,8 +1,8 @@
 ---
 title: Let's Watch: Ouanga and The Devil's Daughter
 description: Two things I enjoy are folklore and zombies. Oddly in spite of the latter I've never been much of a movie fan; being deaf means I'm obliged to use subtitles and since I'm reading anyway, why not just read a book? But I am interested in the origins of the zombies we know and love today, so since it's Zombie Awareness Month, I've decided to embark on a journey of cinematic discovery, if you will, a zomboddysey, of the zombie canon in cinematic history. So let's watch Ouanga and The Devil's Daughter!
-date: 2017-05-08 21:44:00
-lastmod: 2017-05-08 21:44:00
+date: 2017-05-09 22:44:00
+lastmod: 2017-05-09 22:44:00
 ---
 
 A zombie fiction double feature today! _Ouanga_ (1936) and _The Devil's Daughter_ (1939) feature our first villainous leading ladies. Fredi Washington's Clelie turns to dark magic to get back at a man, and Nina Mae McKinney's Isabella turns to dark magic to get back at her sister. 
