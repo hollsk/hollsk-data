@@ -11,7 +11,7 @@ The story isn't going to win any prizes for originality. The creepy Dr. Sangre i
 
 So, pretty much everything in this movie is stuff we've already seen, except for the degree of ubiquitous, overt racism. In spite of this, the film ends up being carried along by its black cast, the only actors here with the ability to act. Marguerite Whitten as the maid Samantha plays an excellent comic foil to Moreland's Jeff, and the pair are great fun to watch together. 
 
-The zombies here are of the alive-but-hypnotised flavour, but it's notable that in this movie the suggestion is twice made that they're _hungry for human flesh!_, something that we haven't really seen up until now. 
+The zombies here are of the alive-but-hypnotised flavour, but it's notable that in this movie the suggestion is twice made that they're _hungry for human flesh!_, something that we haven't really seen up until now. This is also the first outing of the venerable B-movie institution of the Nazi Zombie, although the Nazis aren't billed as such, and there's still a long way to go before we get to _Shock Waves_ or _Död Snö_. 
 
 The movie gets very good reviews elsewhere, but I didn't find it as enjoyable as The Ghost Breakers; although Moreland and Whitten are the bright spots, the rest of the cast are dismally uninspiring. Nor is it as nearly as well-executed as White Zombie, clearly a major inspiration. 
 
