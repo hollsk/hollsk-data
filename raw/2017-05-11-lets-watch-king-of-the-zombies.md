@@ -13,10 +13,10 @@ So, pretty much everything in this movie is stuff we've already seen, except for
 
 The zombies here are of the alive-but-hypnotised flavour, but it's notable that in this movie the suggestion is twice made that they're _hungry for human flesh!_, something that we haven't really seen up until now. 
 
-The movie gets very good reviews elsewhere, but I didn't find it as enjoyable as The Ghost Breakers; although Moreland and Whitten are the bright spots, the rest of the cast are dismally uninspiring, and leave the movie feeling quite flat. 
+The movie gets very good reviews elsewhere, but I didn't find it as enjoyable as The Ghost Breakers; although Moreland and Whitten are the bright spots, the rest of the cast are dismally uninspiring. Nor is it as nearly as well-executed as White Zombie, clearly a major inspiration. 
 
 The film is public domain, and there are several versions on Youtube. I watched [this version](https://www.youtube.com/watch?v=m7_gZjyOQdM). There are no English subtitles available except for Google automatic captions, but there are French subtitles available on [OpenSubtitles](https://www.opensubtitles.org/en/subtitles/5175007/king-of-the-zombies-fr). 
 
-I give this derivative mixed bag 3 salted zombie snacks out of a possible 5!
+I give this derivative mixed bag 2 salted zombie snacks out of a possible 5!
 
-<div class="zombie-stars three-of-five">3 / 5</div>
+<div class="zombie-stars two-of-five">2 / 5</div>
