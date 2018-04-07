@@ -4,52 +4,14 @@
     },
     "title": "hollsk.co.uk",
     "heading": "I am a web developer <br>based in London.",
-    "subheading": "I work for Nature.",
+    "subheading": "I work for Springer Nature.",
     "work": {
         "heading": "My work",
-        "content": "<p>I'm an experienced front end developer, specialising in semantic, accessible code. I've plied my trade for companies like Nature, the BBC, Channel 4, Ogilvy and Mather, the Royal Academy of Music, Gemalto, and many more.<\/p><p>I'm one of the core contributors to the <a href=\"http:\/\/pa11y.org\/\">Pa11y<\/a> accessibility tool.<\/p>"
+        "content": "<p>I'm an experienced front end developer, specialising in semantic, accessible code. I've worked with companies like Nature, the BBC, Channel 4, Ogilvy and Mather, the Royal Academy of Music, Gemalto, and many more.<\/p><p>I'm one of the core contributors to the <a href=\"http:\/\/pa11y.org\/\">Pa11y<\/a> accessibility tool.<\/p>"
     },
     "site": {
         "heading": "My site",
-        "content": "The current build runs on a <a href=\"http:\/\/silex.sensiolabs.org\/\">Silex<\/a> (PHP) backend with a <a href=\"https:\/\/github.com\/springernature\/shunter\/\">Shunter<\/a> (Node.js) frontend. The design was inspired by <a href=\"http:\/\/www.creative-tim.com\/product\/paper-kit\">Paper Kit<\/a>. My workflow benefits from <a href=\"https:\/\/github.com\/hollsk\">Git<\/a>, <a href=\"http:\/\/sass-lang.com\/\">SASS<\/a>, <a href=\"http:\/\/pa11y.org\/\">Pa11y<\/a>, <a href=\"http:\/\/gruntjs.com\/\">Grunt<\/a>, and <a href=\"https:\/\/www.vagrantup.com\/\">Vagrant<\/a> with <a href=\"https:\/\/puppet.com\/\">Puppet<\/a>."
-    },
-    "me": {
-        "heading": "Myself",
-        "section1": {
-            "heading": "I write code.",
-            "content": "My code is maintainable, accessible, re-usable, and semantic. I work to WCAG guidelines and I believe in strong House Styles and sociable programming.",
-            "url": "http:\/\/google.com"
-        },
-        "section2": {
-            "heading": "I ride bikes.",
-            "content": "I have several bikes. Do you like bikes? I like bikes. I like riding my bikes. If you like bikes too, we could go for a ride! On our bikes!"
-        },
-        "section3": {
-            "heading": "I read.",
-            "content": "I mostly read non-fiction, maths, pop science, linguistics. I read graphic novels to classics, comedy to tragedy. My favourite poet is Philip Larkin."
-        }
-    },
-    "social": {
-        "heading": "Places I hang out",
-        "content": "You can also find me on <a href=\"http:\/\/www.linkedin.com\/profile\/view?id=61678736\" target=\"_blank\">LinkedIn<\/a>, <a href=\"http:\/\/www.flickr.com\/photos\/_hollsk\/\" target=\"_blank\">Flickr<\/a>, <a href=\"http:\/\/projecteuler.net\/index.php?section=profile&amp;profile=bothwell\" target=\"_blank\">Project Euler<\/a>, <a href=\"https:\/\/www.goodreads.com\/user\/show\/15326736-holls-kay\" target=\"_blank\">Goodreads<\/a> and <a href=\"http:\/\/steamcommunity.com\/id\/hollsk\/\" target=\"_blank\">Steam<\/a>.<br>I play <a href=\"http:\/\/urbandead.com\/profile.cgi?id=2086663\" target=\"_blank\">Urban Dead<\/a>, <a href=\"http:\/\/fallenlondon.storynexus.com\/profile\/Flechette~la~Espi%C3%A8gle\" target=\"_blank\">Fallen London<\/a>, and <a href=\"http:\/\/www.kingdomofloathing.com\" target=\"_blank\">Kingdom of Loathing (ID #2392571)<\/a>.<br>I do not own any TF2 iPod headphones.",
-        "links": [
-            {
-                "text": "StackExchange",
-                "url": "http:\/\/stackexchange.com\/users\/50112\/hollsk"
-            },
-            {
-                "text": "StackOverflow",
-                "url": "http:\/\/stackoverflow.com\/users\/149354\/hollsk"
-            },
-            {
-                "text": "Github",
-                "url": "https:\/\/github.com\/hollsk"
-            },
-            {
-                "text": "Twitter",
-                "url": "http:\/\/www.twitter.com\/_hollsk"
-            }
-        ]
+        "content": "The current build runs on <a href=\"http:\/\/silex.sensiolabs.org\/\">Silex<\/a> (PHP). The design was inspired by <a href=\"http:\/\/www.creative-tim.com\/product\/paper-kit\">Paper Kit<\/a>. My workflow benefits from <a href=\"https:\/\/github.com\/hollsk\">Git<\/a>, <a href=\"http:\/\/sass-lang.com\/\">SASS<\/a>, <a href=\"http:\/\/pa11y.org\/\">Pa11y<\/a>, <a href=\"http:\/\/gruntjs.com\/\">Grunt<\/a>, and <a href=\"https:\/\/www.vagrantup.com\/\">Vagrant<\/a> with <a href=\"https:\/\/puppet.com\/\">Puppet<\/a>."
     },
     "contact": {
         "heading": "Get in touch",
